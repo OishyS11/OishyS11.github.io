@@ -1,7 +1,7 @@
 # Hi, I'm Oishy Saha! 👋
 
 ## 🔬 About Me
-I am a PhD student in the Department of Electrical and Computer Engineering at the University of Maryland, College Park. My research interests lie in **machine learning, embedded systems, and signal processing**, with a focus on developing efficient and scalable solutions for real-world problems.
+I am a PhD student in the Department of Electrical and Computer Engineering at the University of Maryland, College Park. My research interests lie in **machine learning, embedded systems, and signal processing**, focusing on developing efficient and scalable solutions for real-world problems.
 
 ## 🚀 Research Interests
 - Machine Learning & AI
@@ -17,7 +17,7 @@ I am a PhD student in the Department of Electrical and Computer Engineering at t
 - **Software Development**: Git, Docker, Linux
 
 ## 📫 Connect with Me
-- LinkedIn: [[Oishy Saha](https://www.linkedin.com/in/oishy-saha-18391a164/)](#)
+- LinkedIn: [[Oishy Saha](https://www.linkedin.com/in/oishy-saha-18391a164/)] 
 - Email: [osaha@umd.edu](mailto:osaha@umd.edu)
 - GitHub: [github.com/oishysaha](#)
 
