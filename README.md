@@ -1,51 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        .profile {
-            max-width: 500px;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .profile img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-        .profile h1 {
-            margin: 10px 0;
-        }
-        .social-links a {
-            margin: 10px;
-            text-decoration: none;
-            color: #333;
-            font-size: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="profile">
-        <img src="profile.jpg" alt="Profile Picture">
-        <h1>Your Name</h1>
-        <p>Web Developer | Engineer | Enthusiast</p>
-        <div class="social-links">
-            <a href="https://github.com/yourgithub">GitHub</a>
-            <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a>
-            <a href="mailto:your.email@example.com">Email</a>
-        </div>
-    </div>
-</body>
-</html> 
+# Hi, I'm Oishy Saha! 👋
+
+## 🔬 About Me
+I am a PhD student in the Department of Electrical and Computer Engineering at the University of Maryland, College Park. My research interests lie in **machine learning, embedded systems, and signal processing**, with a focus on developing efficient and scalable solutions for real-world problems.
+
+## 🚀 Research Interests
+- Machine Learning & AI
+- Embedded Systems
+- Signal Processing
+- Wireless Communication
+- Edge Computing
+
+## 🛠️ Skills
+- **Programming Languages**: Python, C++, MATLAB
+- **Tools & Frameworks**: TensorFlow, PyTorch, Scikit-Learn
+- **Embedded Systems**: Raspberry Pi, Arduino, FPGA
+- **Software Development**: Git, Docker, Linux
+
+## 📫 Connect with Me
+- LinkedIn: [linkedin.com/in/oishy-saha](#)
+- Email: [oishy.saha@umd.edu](mailto:osaha@umd.edu)
+- GitHub: [github.com/oishysaha](#)
+
+## 📊 GitHub Stats
+![Oishy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oishysaha&show_icons=true&theme=radical)
+
+---
+Feel free to check out my repositories and reach out for collaboration! 🚀
