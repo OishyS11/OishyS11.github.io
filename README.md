@@ -19,7 +19,7 @@ I am a PhD student in the Department of Electrical and Computer Engineering at t
 ## 📫 Connect with Me
 - LinkedIn: [[Oishy Saha](https://www.linkedin.com/in/oishy-saha-18391a164/)] 
 - Email: [osaha@umd.edu](mailto:osaha@umd.edu)
-- GitHub: [github.com/oishysaha](#)
+- GitHub: [[github.com/oishysaha](https://github.com/OishyS11)](#)
 
 ## 📊 GitHub Stats
 ![Oishy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oishysaha&show_icons=true&theme=radical)
