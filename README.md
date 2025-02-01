@@ -11,9 +11,9 @@ I am a second-year Ph.D. student PhD student in the Department of Electrical and
 - Edge Computing
 
 ## 🛠️ Skills
-- **Programming Languages**: Python, C++, MATLAB
+- **Programming Languages**: Python, C, C++, MATLAB
 - **Tools & Frameworks**: TensorFlow, PyTorch, Scikit-Learn
-- **Embedded Systems**: Raspberry Pi, Arduino, FPGA
+- **Embedded Systems**:  Arduino, FPGA
 - **Software Development**: Git, Docker, Linux
 
 ## 📫 Connect with Me
