@@ -17,8 +17,8 @@ I am a PhD student in the Department of Electrical and Computer Engineering at t
 - **Software Development**: Git, Docker, Linux
 
 ## 📫 Connect with Me
-- LinkedIn: [linkedin.com/in/oishy-saha](#)
-- Email: [oishy.saha@umd.edu](mailto:osaha@umd.edu)
+- LinkedIn: [[linkedin.com/in/oishy-saha](https://www.linkedin.com/in/oishy-saha-18391a164/)](#)
+- Email: [osaha@umd.edu](mailto:osaha@umd.edu)
 - GitHub: [github.com/oishysaha](#)
 
 ## 📊 GitHub Stats
