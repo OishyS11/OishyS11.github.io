@@ -1,20 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oishy Saha - Personal Website</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #4CAF50; }
-        p { font-size: 18px; }
-        a { color: #007bff; text-decoration: none; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oishy Saha</title>
+  <meta name="description" content="Academic profile of Oishy Saha" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{--bg:#0b0f19;--text:#e8ecf3;--muted:#a9b2c7;--link:#7bdcff;--card:#11182a;--border:rgba(255,255,255,.08);--max:860px;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(900px 600px at -10% -20%,#1a2650 0%,var(--bg) 55%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 60px}
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(145deg,rgba(123,220,255,.18),rgba(255,255,255,.06));display:flex;align-items:center;justify-content:center;font-weight:800;border:1px solid var(--border)}
+    .title h1{margin:0 0 6px;font-size:32px}
+    .title p{margin:0;color:var(--muted)}
+    .badges{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);font-weight:600}
+    section{margin-top:28px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    h2{margin:0 0 10px;font-size:20px}
+    ul{margin:0 0 0 18px}
+    footer{margin-top:22px;color:var(--muted);text-align:center}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-    <h1>Hello, I'm Oishy Saha! 👋</h1>
-    <p>PhD Student | Machine Learning | Embedded Systems</p>
-    <p>Welcome to my website!</p>
-    <p>🔗 <a href="https://github.com/OishyS11">GitHub Profile</a></p>
+  <main class="wrap">
+    <header>
+      <div class="avatar" aria-label="avatar">OS</div>
+      <div class="title">
+        <h1>Oishy Saha</h1>
+        <p>Ph.D. Student in ECE @ University of Maryland • DSPCAD Lab</p>
+        <div class="badges">
+          <a class="badge" href="assets/Updated_CV_OS-2025.pdf">CV</a>
+          <a class="badge" href="https://scholar.google.com/citations?user=rJZ1LVAAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="badge" href="https://www.linkedin.com/in/oishy-saha-18391a164/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="badge" href="https://github.com/OishyS11" target="_blank" rel="noopener">GitHub</a>
+          <a class="badge" href="mailto:osaha@umd.edu">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>I am a Ph.D. student in Electrical and Computer Engineering at the University of Maryland, College Park, working as a Graduate Research Assistant at DSPCAD Lab under Dr. Shuvra Bhattacharyya. My research focuses on applied machine learning, signal processing, embedded AI, cyber security, and hardware/software co-design【38†source】.</p>
+    </section>
+
+    <div class="grid">
+      <section>
+        <h2>News</h2>
+        <ul>
+          <li>[2025] Collaborative research at UMD–NIST on anomaly detection in additive manufacturing【38†source】.</li>
+          <li>[2024] Teaching Assistant for ENEE408M and ENEE245, University of Maryland【38†source】.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Applied Machine Learning</li>
+          <li>Signal Processing</li>
+          <li>Embedded AI</li>
+          <li>Cyber Security</li>
+          <li>Hardware/Software Co-Design</li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h2>Selected Publications</h2>
+      <ul>
+        <li>O. Saha, M.S. Mahmud, S.A. Fattah. “Automatic Emotion Recognition from Multi-Band EEG Data Based on a Deep Learning Scheme with Effective Channel Attention.” <i>IEEE Access</i>, 2022【38†source】.</li>
+        <li>M.S. Mahmud, S.A. Fattah, M. Saquib, O. Saha. “Emotion Recognition with Reduced Channels Using CWT Based EEG Feature Representation and a CNN Classifier.” <i>Biomedical Physics and Engineering Express</i>, 2024【38†source】.</li>
+        <li>O. Saha, et al. “A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Images.” <i>IEEE TENCON</i>, 2020【38†source】.</li>
+      </ul>
+    </section>
+
+    <div class="grid">
+      <section>
+        <h2>Research Experience</h2>
+        <ul>
+          <li>Real-Time Image Analysis for Additive Manufacturing (UMD–NIST)【38†source】</li>
+          <li>Real-Time Wireless Communication for Industrial Networks (UMD–NIST)【38†source】</li>
+          <li>Emotion Recognition Using EEG and Speech Signals【38†source】</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Professional Experience</h2>
+        <ul>
+          <li>Graduate Teaching Assistant, University of Maryland (Fall’24–Spring’25)【38†source】</li>
+          <li>Lecturer, Military Institute of Science and Technology, Dhaka (2022–2023)【38†source】</li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>Dean’s List, BUET (CGPA 3.75+)【38†source】</li>
+        <li>University Stipend, BUET【38†source】</li>
+        <li>Best Paper Award at IEEE WIECON-ECE, 2022【38†source】</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:osaha@umd.edu">osaha@umd.edu</a>. I’m open to collaborations—feel free to reach out.</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Oishy Saha · Built with GitHub Pages
+    </footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
