@@ -17,9 +17,10 @@
     a:hover{text-decoration:underline}
     .shell{max-width:var(--max);margin:0 auto;padding:24px}
     .layout{display:grid;grid-template-columns:var(--sidebar) 1fr;gap:24px}
+
     /* Sidebar */
     aside{position:sticky;top:24px;height:fit-content;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
-    .avatar{width:200px;height:200px;border-radius:50%;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);margin:0 auto 18px}
+    .avatar{width:220px;height:220px;border-radius:50%;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);margin:0 auto 18px}
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
     .name{margin:6px 0 2px;text-align:center;font-size:26px;font-weight:800}
     .role{margin:0;text-align:center;color:var(--muted)}
@@ -28,6 +29,7 @@
     nav{margin-top:18px;border-top:1px solid var(--border);padding-top:14px}
     nav a{display:block;padding:8px 10px;border-radius:10px}
     nav a:hover{background:rgba(255,255,255,.06)}
+
     /* Main */
     main{display:flex;flex-direction:column;gap:20px}
     section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
@@ -35,15 +37,49 @@
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .list{margin:0}
     .list li{margin:0 0 8px 20px}
-    .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .card{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:12px;padding:12px}
+
+    /* Publication list styled like screenshot */
+    .pubs {display:flex; flex-direction:column; gap:16px}
+    .pub-item{
+      display:grid; grid-template-columns:86px 1fr;
+      gap:16px; background:var(--card); border:1px solid var(--border);
+      border-radius:12px; padding:16px; box-shadow:var(--shadow);
+    }
+    .pub-badge{
+      height:28px; display:inline-flex; align-items:center; justify-content:center;
+      padding:0 10px; border-radius:8px; font-size:12px; font-weight:800; letter-spacing:.02em; color:#111;
+      margin-top:2px;
+    }
+    .pub-badge.acl{background:#ffb37a}
+    .pub-badge.arxiv{background:#bdbdbd}
+    .pub-badge.ieee{background:#7bdcff}
+    .pub-badge.conf{background:#a7e3a7}
+
+    .pub-main h3{margin:0 0 6px; font-size:22px; line-height:1.25}
+    .pub-main h3 a{color:var(--text)}
+    .pub-authors{margin:0; color:var(--muted)}
+    .pub-authors a{color:var(--link)}
+    .pub-venue{margin:6px 0 10px; color:var(--muted); font-size:14px}
+    .pub-actions{display:flex; flex-wrap:wrap; gap:8px}
+    .pub-btn{
+      display:inline-flex; align-items:center; height:28px; padding:0 10px;
+      border:1px solid var(--border); border-radius:6px; background:rgba(255,255,255,.05);
+      font-weight:700; font-size:12px; letter-spacing:.02em;
+    }
+    .pub-btn:hover{background:rgba(255,255,255,.09); text-decoration:none}
+    .pub-box{margin-top:10px; border:1px dashed var(--border); border-radius:10px; padding:10px; background:rgba(255,255,255,.03)}
+    .pub-box.hidden{display:none}
+    pre.bib{white-space:pre-wrap; word-break:break-word; background:rgba(0,0,0,.25); padding:8px; border-radius:8px; margin:6px 0 0}
+    .pub-copy{margin-top:6px; display:flex; justify-content:flex-end}
+
     footer{color:var(--muted);text-align:center;margin-top:10px}
+
     /* Small screens */
     @media (max-width:900px){
       .layout{grid-template-columns:1fr}
       aside{position:static}
-      .cards{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
+      .pub-item{grid-template-columns:70px 1fr}
     }
   </style>
 </head>
@@ -57,7 +93,7 @@
         <div class="name">Oishy Saha</div>
         <p class="role">Ph.D. Student in ECE @ University of Maryland • DSPCAD Lab</p>
         <div class="badges">
-          <a class="badge" href="https://drive.google.com/file/d/1wZcj-QoKPNKDxaRP1AlXSY57jT1HHkDV/view">CV</a>
+          <a class="badge" href="https://drive.google.com/file/d/1wZcj-QoKPNKDxaRP1AlXSY57jT1HHkDV/view" target="_blank" rel="noopener">CV</a>
           <a class="badge" href="https://scholar.google.com/citations?user=rJZ1LVAAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
           <a class="badge" href="https://www.linkedin.com/in/oishy-saha-18391a164/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="badge" href="https://github.com/OishyS11" target="_blank" rel="noopener">GitHub</a>
@@ -77,7 +113,7 @@
       <main>
         <section id="about">
           <h2>About</h2>
-          <p>I am a third year Ph.D. student in Electrical and Computer Engineering at the University of Maryland, College Park. I am currently working as a Graduate Research Assistant at the <a href="https://code.umd.edu/dspcad-pub/dspcadwiki/-/wikis/Maryland-DSPCAD-Research-Group">DSPCAD Lab </a>under <a href="https://user.eng.umd.edu/~ssb/">Dr. Shuvra Bhattacharyya </a>. My research focuses on applied machine learning, signal processing, embedded AI, cyber security, and hardware/software co-design.</p>
+          <p>I am a third year Ph.D. student in Electrical and Computer Engineering at the University of Maryland, College Park. I am currently working as a Graduate Research Assistant at the <a href="https://code.umd.edu/dspcad-pub/dspcadwiki/-/wikis/Maryland-DSPCAD-Research-Group" target="_blank" rel="noopener">DSPCAD Lab</a> under <a href="https://scholar.google.com/citations?user=rNpUIKAAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Shuvra Bhattacharyya</a>. My research focuses on applied machine learning, signal processing, embedded AI, cyber security, and hardware/software co-design.</p>
         </section>
 
         <section id="news" class="grid-2">
@@ -100,31 +136,135 @@
           </div>
         </section>
 
-        <section id="pubs">
-          <h2>Journal Publications</h2>
-          <div class="cards">
-            <div class="card">
-              <strong>IEEE Access, 2022</strong>
-              <p>O. Saha, M.S. Mahmud, S.A. Fattah. Automatic Emotion Recognition from Multi-Band EEG Data Based on a Deep Learning Scheme with Effective Channel Attention.</p>
-            </div>
-            <div class="card">
-              <strong>Biomed. Physics & Eng. Express, 2024</strong>
-              <p>M.S. Mahmud, S.A. Fattah, M. Saquib, O. Saha. Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier.</p>
-            </div>
-          </div>
-        </section>
+        <!-- ===================== PUBLICATIONS (screenshot-style) ===================== -->
+        <section id="pubs" aria-label="Publications">
+          <h2>Publications</h2>
+          <div class="pubs">
 
-            <section id="pubs">
-          <h2>Conference Proceedings</h2>
-          <div class="cards">
-            <div class="card">
-              <strong>IEEE TENCON, 2020</strong>
-              <p>O. Saha, J. Tasnim, MT. Raihan, T. Mahmud, I. Ahmmed, SA.Fattah. A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image.</p>
-            </div>
-            <div class="card">
-              <strong>IEEE WIECON-ECE, 2022 (Best Paper Award)</strong>
-              <p>DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal.</p>
-            </div>
+            <!-- IEEE Access 2022 -->
+            <article class="pub-item" id="paper-access-2022">
+              <div><span class="pub-badge ieee">IEEE</span></div>
+              <div class="pub-main">
+                <h3><a href="#" target="_blank" rel="noopener">Automatic Emotion Recognition from Multi-Band EEG Data Based on a Deep Learning Scheme with Effective Channel Attention</a></h3>
+                <p class="pub-authors"><a href="#">Oishy Saha</a>, Md. Sakhawat Mahmud, Shaikh A. Fattah</p>
+                <div class="pub-venue">IEEE Access, 2022</div>
+                <div class="pub-actions">
+                  <a class="pub-btn" data-action="toggle" data-target="abs-access-2022" href="#">ABS</a>
+                  <a class="pub-btn" data-action="toggle" data-target="bib-access-2022" href="#">BIB</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">HTML</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
+                </div>
+                <div id="abs-access-2022" class="pub-box hidden">
+                  <strong>Abstract.</strong>
+                  <p>Placeholder abstract. Replace with the official abstract text from the journal.</p>
+                </div>
+                <div id="bib-access-2022" class="pub-box hidden">
+                  <strong>BibTeX.</strong>
+                  <pre id="bibtex-access-2022" class="bib">@article{Saha2022Access,
+  title   = {Automatic Emotion Recognition from Multi-Band EEG Data Based on a Deep Learning Scheme with Effective Channel Attention},
+  author  = {Saha, Oishy and Mahmud, Md. Sakhawat and Fattah, Shaikh Anowarul},
+  journal = {IEEE Access},
+  year    = {2022},
+  note    = {Add volume, pages, DOI}
+}</pre>
+                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-access-2022" href="#">Copy</a></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BPEE 2024 -->
+            <article class="pub-item" id="paper-bpee-2024">
+              <div><span class="pub-badge ieee">Journal</span></div>
+              <div class="pub-main">
+                <h3><a href="#" target="_blank" rel="noopener">Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier</a></h3>
+                <p class="pub-authors">Md. Sakhawat Mahmud, Shaikh A. Fattah, Md. Saquib, <a href="#">Oishy Saha</a></p>
+                <div class="pub-venue">Biomedical Physics &amp; Engineering Express, 2024</div>
+                <div class="pub-actions">
+                  <a class="pub-btn" data-action="toggle" data-target="abs-bpee-2024" href="#">ABS</a>
+                  <a class="pub-btn" data-action="toggle" data-target="bib-bpee-2024" href="#">BIB</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">HTML</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
+                </div>
+                <div id="abs-bpee-2024" class="pub-box hidden">
+                  <strong>Abstract.</strong>
+                  <p>Placeholder abstract. Replace with the official abstract text.</p>
+                </div>
+                <div id="bib-bpee-2024" class="pub-box hidden">
+                  <strong>BibTeX.</strong>
+                  <pre id="bibtex-bpee-2024" class="bib">@article{Mahmud2024BPEE,
+  title   = {Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier},
+  author  = {Mahmud, Md. Sakhawat and Fattah, Shaikh A. and Saquib, Md. and Saha, Oishy},
+  journal = {Biomedical Physics & Engineering Express},
+  year    = {2024},
+  note    = {Add volume, pages, DOI}
+}</pre>
+                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-bpee-2024" href="#">Copy</a></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- TENCON 2020 (arXiv-style badge example) -->
+            <article class="pub-item" id="paper-tencon-2020">
+              <div><span class="pub-badge arxiv">arXiv</span></div>
+              <div class="pub-main">
+                <h3><a href="#" target="_blank" rel="noopener">A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image</a></h3>
+                <p class="pub-authors"><a href="#">Oishy Saha</a>, J. Tasnim, M. T. Raihan, T. Mahmud, I. Ahmmed, S. A. Fattah</p>
+                <div class="pub-venue">arXiv:xxxx.xxxxx, 2020 · Presented at IEEE TENCON 2020</div>
+                <div class="pub-actions">
+                  <a class="pub-btn" data-action="toggle" data-target="abs-tencon-2020" href="#">ABS</a>
+                  <a class="pub-btn" data-action="toggle" data-target="bib-tencon-2020" href="#">BIB</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">HTML</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
+                </div>
+                <div id="abs-tencon-2020" class="pub-box hidden">
+                  <strong>Abstract.</strong>
+                  <p>Placeholder abstract. Replace with the official abstract text.</p>
+                </div>
+                <div id="bib-tencon-2020" class="pub-box hidden">
+                  <strong>BibTeX.</strong>
+                  <pre id="bibtex-tencon-2020" class="bib">@inproceedings{Saha2020TENCON,
+  title     = {A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image},
+  author    = {Saha, Oishy and Tasnim, J. and Raihan, M. T. and Mahmud, T. and Ahmmed, I. and Fattah, S. A.},
+  booktitle = {TENCON 2020 - IEEE Region 10 Conference},
+  year      = {2020},
+  note      = {Add pages and DOI}
+}</pre>
+                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-tencon-2020" href="#">Copy</a></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- WIECON-ECE 2022 -->
+            <article class="pub-item" id="paper-wiecon-2022">
+              <div><span class="pub-badge conf">WIECON</span></div>
+              <div class="pub-main">
+                <h3><a href="#" target="_blank" rel="noopener">DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal</a></h3>
+                <p class="pub-authors">O. Saha, et al.</p>
+                <div class="pub-venue">IEEE WIECON-ECE, 2022 — Best Paper Award</div>
+                <div class="pub-actions">
+                  <a class="pub-btn" data-action="toggle" data-target="abs-wiecon-2022" href="#">ABS</a>
+                  <a class="pub-btn" data-action="toggle" data-target="bib-wiecon-2022" href="#">BIB</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">HTML</a>
+                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
+                </div>
+                <div id="abs-wiecon-2022" class="pub-box hidden">
+                  <strong>Abstract.</strong>
+                  <p>Placeholder abstract. Replace with the official abstract text.</p>
+                </div>
+                <div id="bib-wiecon-2022" class="pub-box hidden">
+                  <strong>BibTeX.</strong>
+                  <pre id="bibtex-wiecon-2022" class="bib">@inproceedings{Saha2022WIECON,
+  title     = {DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal},
+  author    = {Saha, Oishy and coauthors},
+  booktitle = {IEEE WIECON-ECE},
+  year      = {2022},
+  note      = {Best Paper Award. Add pages and DOI}
+}</pre>
+                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-wiecon-2022" href="#">Copy</a></div>
+                </div>
+              </div>
+            </article>
+
           </div>
         </section>
 
@@ -169,6 +309,31 @@
       </main>
     </div>
   </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle ABS/BIB boxes & copy BibTeX
+    document.addEventListener('click', function(e){
+      const a = e.target.closest('a.pub-btn');
+      if(!a) return;
+      const action = a.dataset.action, target = a.dataset.target;
+      if(action === 'toggle'){
+        e.preventDefault();
+        const box = document.getElementById(target);
+        if(box) box.classList.toggle('hidden');
+      }
+      if(action === 'copy'){
+        e.preventDefault();
+        const pre = document.getElementById(target);
+        if(pre){
+          navigator.clipboard.writeText(pre.textContent.trim()).then(()=>{
+            a.textContent = 'Copied!'; setTimeout(()=>a.textContent='Copy', 1000);
+          }).catch(()=>{ alert('Copy failed.'); });
+        }
+      }
+    });
+  </script>
 </body>
 </html>
