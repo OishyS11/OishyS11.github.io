@@ -7,7 +7,7 @@ I am a second-year Ph.D. student PhD student in the Department of Electrical and
 - Machine Learning & AI
 - Embedded Systems
 - Signal Processing
-- Wireless Communication
+- Wireless Sensor Networks
 - Edge Computing
 
 ## 🛠️ Skills
@@ -20,6 +20,7 @@ I am a second-year Ph.D. student PhD student in the Department of Electrical and
 - LinkedIn: [[Oishy Saha](https://www.linkedin.com/in/oishy-saha-18391a164/)] 
 - Email: [osaha@umd.edu](mailto:osaha@umd.edu)
 - GitHub: [[github.com/oishysaha](https://github.com/OishyS11)]
+- Website: [https://github.com/OishyS11/OishyS11.github.io]
 
 
 ---
