@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oishy Saha</title>
+  <meta name="description" content="Academic profile of Oishy Saha" />
+  <link rel="icon" href="favicon.ico" />
+  <!--INLINE_CSS-->
+  <link rel="preload" href="publications.json" as="fetch" crossorigin="anonymous">
+</head>
+<body>
+  <div class="shell">
+    <div class="layout">
+      <aside>
+        <div class="avatar">
+          <img src="Oishy_UMD_Pic.jpg" alt="Oishy Saha" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:800;\'>OS</div>');" />
+        </div>
+        <div class="name">Oishy Saha</div>
+        <p class="role">Ph.D. Student in ECE @ University of Maryland • DSPCAD Lab</p>
+        <div class="badges">
+          <a class="badge" href="https://drive.google.com/file/d/1JEFo77OLb3tCcdjQa3S0Suuu-5IKSiax/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+          <a class="badge" href="https://drive.google.com/file/d/1tNK-tmSRyP__QECheBGEOS-fmhIPviQa/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+          <a class="badge" href="https://scholar.google.com/citations?user=rJZ1LVAAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="badge" href="https://www.linkedin.com/in/oishy-saha-18391a164/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="badge" href="https://github.com/OishyS11" target="_blank" rel="noopener">GitHub</a>
+          <a class="badge" href="mailto:osaha@umd.edu">Email</a>
+        </div>
+        <nav aria-label="Section navigation">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#interests">Research Interests</a>
+          <a href="#pubs">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#awards">Honors & Awards</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </aside>
+
+      <main>
+        <section id="about">
+          <h2>About</h2>
+          <p>I am a third year Ph.D. student in Electrical and Computer Engineering at the University of Maryland, College Park. I am currently working as a Graduate Research Assistant at the <a href="https://code.umd.edu/dspcad-pub/dspcadwiki/-/wikis/Maryland-DSPCAD-Research-Group" target="_blank" rel="noopener">DSPCAD Lab</a> under <a href="https://user.eng.umd.edu/~ssb/" target="_blank" rel="noopener">Dr. Shuvra Bhattacharyya</a>. My research focuses on applied machine learning, signal processing, embedded systems, wireless sensor networks, and hardware/software co-design.</p>
+        </section>
+
+        <section id="news" class="grid-2">
+          <div>
+            <h2>News</h2>
+            <ul class="list">
+              <li>[2025] Collaborative research at UMD–NIST on anomaly detection in additive manufacturing.</li>
+              <li>[2024] Teaching Assistant for ENEE 690, ENEE408M and ENEE245, University of Maryland.</li>
+            </ul>
+          </div>
+          <div>
+            <h2 id="interests">Research Interests</h2>
+            <ul class="list">
+              <li>Computer Vision</li>
+              <li>Signal Processing</li>
+              <li>Embedded Systems</li>
+              <li>Edge Computing</li>
+              <li>Hardware/Software Co-Design</li>
+              <li>Wireless Sensor Networks</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===================== PUBLICATIONS ===================== -->
+        <section id="pubs" aria-label="Publications">
+          <h2>Publications</h2>
+          <div class="pubs">
+            <!--PUBLICATIONS_RENDERED-->
+          </div>
+        </section>
+
+        <section id="experience" class="grid-2">
+          <div>
+            <h2>Research Experience</h2>
+            <ul class="list">
+              <li>Real-Time Image Analysis for Additive Manufacturing (UMD–NIST)</li>
+              <li>Real-Time Wireless Communication for Industrial Networks (UMD–NIST)</li>
+              <li>Emotion Recognition Using EEG and Speech Signals</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Professional Experience</h2>
+            <ul class="list">
+              <li>Graduate Teaching Assistant, University of Maryland (Fall’24, Spring’25, Fall'25)</li>
+              <li>Lecturer, Military Institute of Science and Technology, Dhaka (2022–2023)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="awards">
+          <h2>Honors & Awards</h2>
+          <ul class="list">
+            <li>Dean’s List for four consecutive years, BUET for obtaining CGPA 3.75+</li>
+            <li>University Stipend in all 8 semesters, BUET</li>
+            <li>Best Paper Award at IEEE WIECON-ECE, 2022</li>
+            <li>General Scholarship in Secondary School Certificate, 2014</li>
+            <li>Champion in Regional Biology Olympiad, 2013</li>
+            <li>Talentpool Scholarship in Junior School Certificate, 2011</li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:osaha@umd.edu">osaha@umd.edu</a>. I’m open to collaborations—feel free to reach out.</p>
+        </section>
+
+        <footer>
+          © <span id="year"></span> Oishy Saha · Built with GitHub Pages
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

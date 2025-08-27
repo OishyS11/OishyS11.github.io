@@ -1,40 +1,74 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-    color: #333;
+:root{
+  --bg:#0b0f19;--text:#e8ecf3;--muted:#a9b2c7;--link:#7bdcff;--card:#11182a;--border:rgba(255,255,255,.08);
+  --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35);--max:1180px;--sidebar:300px
 }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:radial-gradient(900px 600px at -10% -20%,#1a2650 0%,var(--bg) 55%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.shell{max-width:var(--max);margin:0 auto;padding:24px}
+.layout{display:grid;grid-template-columns:var(--sidebar) 1fr;gap:24px}
 
-header {
-    background: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Sidebar */
+aside{position:sticky;top:24px;height:fit-content;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+.avatar{width:220px;height:220px;border-radius:50%;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);margin:0 auto 18px}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.name{margin:6px 0 2px;text-align:center;font-size:26px;font-weight:800}
+.role{margin:0;text-align:center;color:var(--muted)}
+.badges{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);font-weight:600}
+nav{margin-top:18px;border-top:1px solid var(--border);padding-top:14px}
+nav a{display:block;padding:8px 10px;border-radius:10px}
+nav a:hover{background:rgba(255,255,255,.06)}
+
+/* Main */
+main{display:flex;flex-direction:column;gap:20px}
+section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+h2{margin:0 0 12px;font-size:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.list{margin:0}
+.list li{margin:0 0 8px 20px}
+
+/* Publication list styled like screenshot */
+.pubs {display:flex; flex-direction:column; gap:16px}
+.pub-item{
+  display:grid; grid-template-columns:86px 1fr;
+  gap:16px; background:var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:16px; box-shadow:var(--shadow);
 }
-
-main {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+.pub-badge{
+  height:28px; display:inline-flex; align-items:center; justify-content:center;
+  padding:0 10px; border-radius:8px; font-size:12px; font-weight:800; letter-spacing:.02em; color:#111;
+  margin-top:2px;
 }
+.pub-badge.acl{background:#ffb37a}
+.pub-badge.arxiv{background:#bdbdbd}
+.pub-badge.ieee{background:#7bdcff}
+.pub-badge.conf{background:#a7e3a7}
 
-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+.pub-main h3{margin:0 0 6px; font-size:22px; line-height:1.25}
+.pub-main h3 a{color:var(--text)}
+.pub-authors{margin:0; color:var(--muted)}
+.pub-authors a{color:var(--link)}
+.pub-venue{margin:6px 0 10px; color:var(--muted); font-size:14px}
+.pub-actions{display:flex; flex-wrap:wrap; gap:8px}
+.pub-btn{
+  display:inline-flex; align-items:center; height:28px; padding:0 10px;
+  border:1px solid var(--border); border-radius:6px; background:rgba(255,255,255,.05);
+  font-weight:700; font-size:12px; letter-spacing:.02em;
 }
+.pub-btn:hover{background:rgba(255,255,255,.09); text-decoration:none}
+.pub-box{margin-top:10px; border:1px dashed var(--border); border-radius:10px; padding:10px; background:rgba(255,255,255,.03)}
+.pub-box.hidden{display:none}
+pre.bib{white-space:pre-wrap; word-break:break-word; background:rgba(0,0,0,.25); padding:8px; border-radius:8px; margin:6px 0 0}
+.pub-copy{margin-top:6px; display:flex; justify-content:flex-end}
 
-button:hover {
-    background: #3e8e41;
-}
+footer{color:var(--muted);text-align:center;margin-top:10px}
 
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+/* Small screens */
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  aside{position:static}
+  .grid-2{grid-template-columns:1fr}
+  .pub-item{grid-template-columns:70px 1fr}
 }
