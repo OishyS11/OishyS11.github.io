@@ -71,7 +71,7 @@ def render_pub(p):
 def main():
   css = load("style.css")
   app_js = load("app.js")
-  tpl = load("index.template.html")
+  tpl = load("index.html")
   pubs = json.loads(load("publications.json"))
   pubs_html = "\n".join(render_pub(p) for p in pubs)
 
