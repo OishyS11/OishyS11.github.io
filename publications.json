@@ -1,182 +1,66 @@
 [
   {
-    "id": "paper-access-2022",
-    "badge_class": "ieee",
-    "badge_label": "IEEE",
-    "title": "Automatic Emotion Recognition from Multi-Band EEG Data Based on a Deep Learning Scheme with Effective Channel Attention",
-    "title_url": "#",
-    "authors": [
-      {
-        "name": "Oishy Saha",
-        "url": "#"
-      },
-      {
-        "name": "Md. Sakhawat Mahmud"
-      },
-      {
-        "name": "Shaikh A. Fattah"
-      }
-    ],
+    "id": "access-2022",
+    "badge": "IEEE",
+    "badgeClass": "ieee",
+    "type": "journal",
+    "title": "Automatic Emotion Recognition From Multi-Band EEG Data Based on a Deep Learning Scheme With Effective Channel Attention",
+    "authors": ["Oishy Saha", "Md. Sultan Mahmud", "Shaikh A. Fattah", "Mohammad Saquib"],
     "venue": "IEEE Access",
-    "year": 2022,
-    "links": [
-      {
-        "label": "ABS",
-        "action": "toggle",
-        "target": "abs-access-2022"
-      },
-      {
-        "label": "BIB",
-        "action": "toggle",
-        "target": "bib-access-2022"
-      },
-      {
-        "label": "HTML",
-        "url": "#"
-      },
-      {
-        "label": "CODE",
-        "url": "#"
-      }
-    ],
-    "abstract": "Automatic emotion recognition using electroencephalogram (EEG) has obtained a wide range of attention... (paste full abstract here).",
+    "year": 2023,
+    "date": "2023-01-15",
+    "volume": "11",
+    "pages": "2342–2350",
+    "doi": "10.1109/ACCESS.2022.3224725",
+    "links": {
+      "html": "https://ieeexplore.ieee.org/abstract/document/9963974",
+      "pdf": "",
+      "code": ""
+    },
+    "abstract": "Automatic emotion recognition using EEG ... (shorten for page)",
     "bibtex": "@ARTICLE{9963974,\n  author={Saha, Oishy and Mahmud, Md. Sultan and Fattah, Shaikh Anowarul and Saquib, Mohammad},\n  journal={IEEE Access},\n  title={Automatic Emotion Recognition From Multi-Band EEG Data Based on a Deep Learning Scheme With Effective Channel Attention},\n  year={2023},\n  volume={11},\n  pages={2342-2350},\n  doi={10.1109/ACCESS.2022.3224725}\n}"
   },
   {
-    "id": "paper-bpee-2024",
-    "badge_class": "ieee",
-    "badge_label": "Journal",
+    "id": "bpee-2024",
+    "badge": "Journal",
+    "badgeClass": "ieee",
+    "type": "journal",
     "title": "Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier",
-    "title_url": "#",
-    "authors": [
-      {
-        "name": "Md. Sakhawat Mahmud"
-      },
-      {
-        "name": "Shaikh A. Fattah"
-      },
-      {
-        "name": "Md. Saquib"
-      },
-      {
-        "name": "Oishy Saha",
-        "url": "#"
-      }
-    ],
+    "authors": ["Md. Sakhawat Mahmud", "Shaikh A. Fattah", "Md. Saquib", "Oishy Saha"],
     "venue": "Biomedical Physics & Engineering Express",
     "year": 2024,
-    "links": [
-      {
-        "label": "ABS",
-        "action": "toggle",
-        "target": "abs-bpee-2024"
-      },
-      {
-        "label": "BIB",
-        "action": "toggle",
-        "target": "bib-bpee-2024"
-      },
-      {
-        "label": "HTML",
-        "url": "#"
-      },
-      {
-        "label": "CODE",
-        "url": "#"
-      }
-    ],
-    "abstract": "Placeholder abstract. Replace with the official abstract text.",
-    "bibtex": "@article{Mahmud2024BPEE,\n  title   = {Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier},\n  author  = {Mahmud, Md. Sakhawat and Fattah, Shaikh A. and Saquib, Md. and Saha, Oishy},\n  journal = {Biomedical Physics & Engineering Express},\n  year    = {2024},\n  note    = {Add volume, pages, DOI}\n}"
+    "links": {
+      "html": "",
+      "pdf": "",
+      "code": ""
+    },
+    "abstract": "Placeholder abstract.",
+    "bibtex": "@article{Mahmud2024BPEE,\n  title={Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier},\n  author={Mahmud, Md. Sakhawat and Fattah, Shaikh A. and Saquib, Md. and Saha, Oishy},\n  journal={Biomedical Physics & Engineering Express},\n  year={2024}\n}"
   },
   {
-    "id": "paper-tencon-2020",
-    "badge_class": "arxiv",
-    "badge_label": "IEEE TENCON",
+    "id": "tencon-2020",
+    "badge": "IEEE TENCON",
+    "badgeClass": "arxiv",
+    "type": "conference",
     "title": "A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image",
-    "title_url": "#",
-    "authors": [
-      {
-        "name": "Oishy Saha",
-        "url": "#"
-      },
-      {
-        "name": "J. Tasnim"
-      },
-      {
-        "name": "M. T. Raihan"
-      },
-      {
-        "name": "T. Mahmud"
-      },
-      {
-        "name": "I. Ahmmed"
-      },
-      {
-        "name": "S. A. Fattah"
-      }
-    ],
-    "venue": "arXiv:xxxx.xxxxx · Presented at IEEE TENCON",
+    "authors": ["Oishy Saha", "J. Tasnim", "M. T. Raihan", "T. Mahmud", "I. Ahmmed", "S. A. Fattah"],
+    "venue": "TENCON 2020 - IEEE Region 10 Conference",
     "year": 2020,
-    "links": [
-      {
-        "label": "ABS",
-        "action": "toggle",
-        "target": "abs-tencon-2020"
-      },
-      {
-        "label": "BIB",
-        "action": "toggle",
-        "target": "bib-tencon-2020"
-      },
-      {
-        "label": "HTML",
-        "url": "#"
-      },
-      {
-        "label": "CODE",
-        "url": "#"
-      }
-    ],
-    "abstract": "Placeholder abstract. Replace with the official abstract text.",
-    "bibtex": "@inproceedings{Saha2020TENCON,\n  title     = {A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image},\n  author    = {Saha, Oishy and Tasnim, J. and Raihan, M. T. and Mahmud, T. and Ahmmed, I. and Fattah, S. A.},\n  booktitle = {TENCON 2020 - IEEE Region 10 Conference},\n  year      = {2020},\n  note      = {Add pages and DOI}\n}"
+    "links": { "html": "", "pdf": "", "code": "" },
+    "abstract": "Placeholder abstract.",
+    "bibtex": "@inproceedings{Saha2020TENCON,\n  title={A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image},\n  author={Saha, Oishy and Tasnim, J. and Raihan, M. T. and Mahmud, T. and Ahmmed, I. and Fattah, S. A.},\n  booktitle={TENCON 2020 - IEEE Region 10 Conference},\n  year={2020}\n}"
   },
   {
-    "id": "paper-wiecon-2022",
-    "badge_class": "conf",
-    "badge_label": "WIECON",
+    "id": "wiecon-2022",
+    "badge": "WIECON",
+    "badgeClass": "conf",
+    "type": "conference",
     "title": "DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal",
-    "title_url": "#",
-    "authors": [
-      {
-        "name": "O. Saha"
-      },
-      {
-        "name": "et al."
-      }
-    ],
+    "authors": ["Oishy Saha", "et al."],
     "venue": "IEEE WIECON-ECE — Best Paper Award",
     "year": 2022,
-    "links": [
-      {
-        "label": "ABS",
-        "action": "toggle",
-        "target": "abs-wiecon-2022"
-      },
-      {
-        "label": "BIB",
-        "action": "toggle",
-        "target": "bib-wiecon-2022"
-      },
-      {
-        "label": "HTML",
-        "url": "#"
-      },
-      {
-        "label": "CODE",
-        "url": "#"
-      }
-    ],
-    "abstract": "Placeholder abstract. Replace with the official abstract text.",
-    "bibtex": "@inproceedings{Saha2022WIECON,\n  title     = {DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal},\n  author    = {Saha, Oishy and coauthors},\n  booktitle = {IEEE WIECON-ECE},\n  year      = {2022},\n  note      = {Best Paper Award. Add pages and DOI}\n}"
+    "links": { "html": "", "pdf": "", "code": "" },
+    "abstract": "Placeholder abstract.",
+    "bibtex": "@inproceedings{Saha2022WIECON,\n  title={DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal},\n  author={Saha, Oishy and coauthors},\n  booktitle={IEEE WIECON-ECE},\n  year={2022}\n}"
   }
 ]
