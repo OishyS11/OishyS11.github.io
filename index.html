@@ -38,7 +38,7 @@
     .list{margin:0}
     .list li{margin:0 0 8px 20px}
 
-    /* Publication list styled like screenshot */
+    /* Publication list */
     .pubs {display:flex; flex-direction:column; gap:16px}
     .pub-item{
       display:grid; grid-template-columns:86px 1fr;
@@ -136,144 +136,15 @@
               <li>Edge Computing</li>
               <li>Hardware/Software Co-Design</li>
               <li>Wireless Sensor Networks</li>
-              
             </ul>
           </div>
         </section>
 
-        <!-- ===================== PUBLICATIONS (screenshot-style) ===================== -->
+        <!-- ===================== PUBLICATIONS (JSON-driven) ===================== -->
         <section id="pubs" aria-label="Publications">
           <h2>Publications</h2>
-          <div class="pubs">
-
-            <!-- IEEE Access 2022 -->
-            <article class="pub-item" id="paper-access-2022">
-              <div><span class="pub-badge ieee">IEEE</span></div>
-              <div class="pub-main">
-                <h3><a href="#" target="_blank" rel="noopener">Automatic Emotion Recognition from Multi-Band EEG Data Based on a Deep Learning Scheme with Effective Channel Attention</a></h3>
-                <p class="pub-authors"><a href="#">Oishy Saha</a>, Md. Sultan Mahmud, Shaikh A. Fattah</p>
-                <div class="pub-venue">IEEE Access, 2022</div>
-                <div class="pub-actions">
-                  <a class="pub-btn" data-action="toggle" data-target="abs-access-2022" href="#">ABS</a>
-                  <a class="pub-btn" data-action="toggle" data-target="bib-access-2022" href="#">BIB</a>
-                  <a class="pub-btn" href="https://ieeexplore.ieee.org/abstract/document/9963974" target="_blank" rel="noopener">HTML</a>
-                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
-                </div>
-                <div id="abs-access-2022" class="pub-box hidden">
-                  <strong>Abstract.</strong>
-                  <p>Automatic emotion recognition using electroencephalogram (EEG) has obtained a wide range of attention in the domain of human-computer interaction (HCI) owing to the notable differences in brain activities in the event of different types of emotions. In this paper, a novel emotion recognition approach is proposed based on a deep learning scheme utilizing the temporal, spatial, and frequency effects of the EEG signal. As neural firing provides a pathway to elicit emotions, temporal, spatial, and frequency sub-band analysis of EEG signals uncovers salient information to categorize different classes of emotions. In this regard, temporal data from each channel are divided into major spectral bands and 2D signal matrices are constructed by combining the temporal information of different frequency band signals. After concatenating all signal matrices obtained from the available channels, a 3D feature space is obtained, which can better characterize emotion variations and, thus, better classification performance is obtained. The feature space is applied to a 2D deep neural network where the band information is passed to the depth dimension of the neural network. In order to highlight the important channels, a channel attention mechanism is proposed with the neural network to distribute the weights among the channels according to the contribution. Hence, the modified feature space effectively captures distinctive information about specific channels in the context of emotion recognition. In this study, detailed and extensive experimentations are carried out on a publicly available DEAP dataset and a very satisfactory performance is obtained for the valence and the arousal domain in 2-class scenario for the subject-dependent case. The average accuracies obtained for valence and arousal domain in binary class problem are 97.06% and 96.93%, respectively.</p>
-                </div>
-                <div id="bib-access-2022" class="pub-box hidden">
-                  <strong>BibTeX.</strong>
-                  <pre id="bibtex-access-2022" class="bib">@ARTICLE{9963974,
-  author={Saha, Oishy and Mahmud, Md. Sultan and Fattah, Shaikh Anowarul and Saquib, Mohammad},
-  journal={IEEE Access}, 
-  title={Automatic Emotion Recognition From Multi-Band EEG Data Based on a Deep Learning Scheme With Effective Channel Attention}, 
-  year={2023},
-  volume={11},
-  number={},
-  pages={2342-2350},
-  keywords={Electroencephalography;Feature extraction;Emotion recognition;Deep learning;Brain modeling;Time-frequency analysis;Three-dimensional displays;Electroencephalogram (EEG);brain-computer interface (BCI);frequency bands;channel attention;deep learning},
-  doi={10.1109/ACCESS.2022.3224725}}
-}</pre>
-                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-access-2022" href="#">Copy</a></div>
-                </div>
-              </div>
-            </article>
-
-            <!-- BPEE 2024 -->
-            <article class="pub-item" id="paper-bpee-2024">
-              <div><span class="pub-badge ieee">Journal</span></div>
-              <div class="pub-main">
-                <h3><a href="#" target="_blank" rel="noopener">Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier</a></h3>
-                <p class="pub-authors">Md. Sultan Mahmud, Shaikh A. Fattah, Md. Saquib, <a href="#">Oishy Saha</a></p>
-                <div class="pub-venue">Biomedical Physics &amp; Engineering Express, 2024</div>
-                <div class="pub-actions">
-                  <a class="pub-btn" data-action="toggle" data-target="abs-bpee-2024" href="#">ABS</a>
-                  <a class="pub-btn" data-action="toggle" data-target="bib-bpee-2024" href="#">BIB</a>
-                  <a class="pub-btn" href="#" target="_blank" rel="noopener">HTML</a>
-                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
-                </div>
-                <div id="abs-bpee-2024" class="pub-box hidden">
-                  <strong>Abstract.</strong>
-                  <p>Placeholder abstract. Replace with the official abstract text.</p>
-                </div>
-                <div id="bib-bpee-2024" class="pub-box hidden">
-                  <strong>BibTeX.</strong>
-                  <pre id="bibtex-bpee-2024" class="bib">@article{Mahmud2024BPEE,
-  title   = {Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier},
-  author  = {Mahmud, Md. Sakhawat and Fattah, Shaikh A. and Saquib, Md. and Saha, Oishy},
-  journal = {Biomedical Physics & Engineering Express},
-  year    = {2024},
-  note    = {Add volume, pages, DOI}
-}</pre>
-                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-bpee-2024" href="#">Copy</a></div>
-                </div>
-              </div>
-            </article>
-
-            <!-- TENCON 2020 (arXiv-style badge example) -->
-            <article class="pub-item" id="paper-tencon-2020">
-              <div><span class="pub-badge arxiv">IEEE TENCON</span></div>
-              <div class="pub-main">
-                <h3><a href="#" target="_blank" rel="noopener">A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image</a></h3>
-                <p class="pub-authors"><a href="#">Oishy Saha</a>, J. Tasnim, M. T. Raihan, T. Mahmud, I. Ahmmed, S. A. Fattah</p>
-                <div class="pub-venue">arXiv:xxxx.xxxxx, 2020 · Presented at IEEE TENCON 2020</div>
-                <div class="pub-actions">
-                  <a class="pub-btn" data-action="toggle" data-target="abs-tencon-2020" href="#">ABS</a>
-                  <a class="pub-btn" data-action="toggle" data-target="bib-tencon-2020" href="#">BIB</a>
-                  <a class="pub-btn" href="#" target="_blank" rel="noopener">HTML</a>
-                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
-                </div>
-                <div id="abs-tencon-2020" class="pub-box hidden">
-                  <strong>Abstract.</strong>
-                  <p>Placeholder abstract. Replace with the official abstract text.</p>
-                </div>
-                <div id="bib-tencon-2020" class="pub-box hidden">
-                  <strong>BibTeX.</strong>
-                  <pre id="bibtex-tencon-2020" class="bib">@inproceedings{Saha2020TENCON,
-  title     = {A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image},
-  author    = {Saha, Oishy and Tasnim, J. and Raihan, M. T. and Mahmud, T. and Ahmmed, I. and Fattah, S. A.},
-  booktitle = {TENCON 2020 - IEEE Region 10 Conference},
-  year      = {2020},
-  note      = {Add pages and DOI}
-}</pre>
-                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-tencon-2020" href="#">Copy</a></div>
-                </div>
-              </div>
-            </article>
-
-            <!-- WIECON-ECE 2022 -->
-            <article class="pub-item" id="paper-wiecon-2022">
-              <div><span class="pub-badge conf">WIECON</span></div>
-              <div class="pub-main">
-                <h3><a href="#" target="_blank" rel="noopener">DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal</a></h3>
-                <p class="pub-authors">O. Saha, et al.</p>
-                <div class="pub-venue">IEEE WIECON-ECE, 2022 — Best Paper Award</div>
-                <div class="pub-actions">
-                  <a class="pub-btn" data-action="toggle" data-target="abs-wiecon-2022" href="#">ABS</a>
-                  <a class="pub-btn" data-action="toggle" data-target="bib-wiecon-2022" href="#">BIB</a>
-                  <a class="pub-btn" href="#" target="_blank" rel="noopener">HTML</a>
-                  <a class="pub-btn" href="#" target="_blank" rel="noopener">CODE</a>
-                </div>
-                <div id="abs-wiecon-2022" class="pub-box hidden">
-                  <strong>Abstract.</strong>
-                  <p>Placeholder abstract. Replace with the official abstract text.</p>
-                </div>
-                <div id="bib-wiecon-2022" class="pub-box hidden">
-                  <strong>BibTeX.</strong>
-                  <pre id="bibtex-wiecon-2022" class="bib">@inproceedings{Saha2022WIECON,
-  title     = {DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal},
-  author    = {Saha, Oishy and coauthors},
-  booktitle = {IEEE WIECON-ECE},
-  year      = {2022},
-  note      = {Best Paper Award. Add pages and DOI}
-}</pre>
-                  <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="bibtex-wiecon-2022" href="#">Copy</a></div>
-                </div>
-              </div>
-            </article>
-
+          <div class="pubs" id="pub-list">
+            <!-- Dynamically injected -->
           </div>
         </section>
 
@@ -324,7 +195,71 @@
     // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Toggle ABS/BIB boxes & copy BibTeX
+    // Render pubs from JSON
+    function escapeHtml(s){ return String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;'); }
+
+    function renderPubItem(p){
+      const idAbs = `abs-${p.id}`;
+      const idBib = `bib-${p.id}`;
+      const has = (k)=> p.links && p.links[k] && p.links[k].trim() !== '';
+      const authors = (p.authors||[]).join(', ');
+      const venueLine = [p.venue, p.year].filter(Boolean).join(', ');
+      const doiBtn = p.doi ? `<a class="pub-btn" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI</a>` : '';
+
+      return `
+        <article class="pub-item" id="paper-${escapeHtml(p.id)}">
+          <div>${p.badge ? `<span class="pub-badge ${escapeHtml((p.badgeClass||'').toLowerCase())}">${escapeHtml(p.badge)}</span>` : ''}</div>
+          <div class="pub-main">
+            <h3>${p.title ? `<a href="${has('html') ? p.links.html : '#'}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a>` : ''}</h3>
+            <p class="pub-authors">${escapeHtml(authors)}</p>
+            <div class="pub-venue">${escapeHtml(venueLine)}</div>
+            <div class="pub-actions">
+              ${p.abstract ? `<a class="pub-btn" data-action="toggle" data-target="${idAbs}" href="#">ABS</a>` : ''}
+              ${p.bibtex ? `<a class="pub-btn" data-action="toggle" data-target="${idBib}" href="#">BIB</a>` : ''}
+              ${has('html') ? `<a class="pub-btn" href="${p.links.html}" target="_blank" rel="noopener">HTML</a>` : ''}
+              ${has('pdf')  ? `<a class="pub-btn" href="${p.links.pdf}" target="_blank" rel="noopener">PDF</a>` : ''}
+              ${has('code') ? `<a class="pub-btn" href="${p.links.code}" target="_blank" rel="noopener">CODE</a>` : ''}
+              ${doiBtn}
+            </div>
+            ${p.abstract ? `
+              <div id="${idAbs}" class="pub-box hidden">
+                <strong>Abstract.</strong>
+                <p>${escapeHtml(p.abstract)}</p>
+              </div>` : ''}
+            ${p.bibtex ? `
+              <div id="${idBib}" class="pub-box hidden">
+                <strong>BibTeX.</strong>
+                <pre id="pre-${idBib}" class="bib">${escapeHtml(p.bibtex)}</pre>
+                <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="pre-${idBib}" href="#">Copy</a></div>
+              </div>` : ''}
+          </div>
+        </article>
+      `;
+    }
+
+    async function loadPublications(){
+      const container = document.getElementById('pub-list');
+      try{
+        const res = await fetch('/publications.json', { cache: 'no-cache' });
+        if(!res.ok) throw new Error('Failed to load publications.json');
+        const items = await res.json();
+
+        // Sort newest first; if 'date' provided, prefer it; fallback to year
+        items.sort((a,b)=>{
+          const da = a.date ? new Date(a.date) : new Date(String(a.year||0));
+          const db = b.date ? new Date(b.date) : new Date(String(b.year||0));
+          return db - da;
+        });
+
+        container.innerHTML = items.map(renderPubItem).join('');
+
+      }catch(err){
+        console.error(err);
+        container.innerHTML = `<p style="color:#b00">Failed to load publications.</p>`;
+      }
+    }
+
+    // Global click handler for ABS/BIB toggle + BibTeX copy
     document.addEventListener('click', function(e){
       const a = e.target.closest('a.pub-btn');
       if(!a) return;
@@ -340,10 +275,13 @@
         if(pre){
           navigator.clipboard.writeText(pre.textContent.trim()).then(()=>{
             a.textContent = 'Copied!'; setTimeout(()=>a.textContent='Copy', 1000);
-          }).catch(()=>{ alert('Copy failed.'); });
+          }).catch(()=> alert('Copy failed.'));
         }
       }
     });
+
+    // Init
+    loadPublications();
   </script>
 </body>
 </html>
