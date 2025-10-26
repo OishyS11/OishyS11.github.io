@@ -1,7 +1,7 @@
 [
   {
     "id": "access-2022",
-    "badge": "IEEE Access",
+    "badge": "Journal",
     "badgeClass": "ieee",
     "type": "journal",
     "title": "Automatic Emotion Recognition From Multi-Band EEG Data Based on a Deep Learning Scheme With Effective Channel Attention",
@@ -39,7 +39,7 @@
   },
   {
     "id": "tencon-2020",
-    "badge": "IEEE TENCON",
+    "badge": "Conference",
     "badgeClass": "arxiv",
     "type": "conference",
     "title": "A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image",
@@ -52,12 +52,12 @@
   },
   {
     "id": "wiecon-2022",
-    "badge": "WIECON",
+    "badge": "Conference",
     "badgeClass": "conf",
     "type": "conference",
     "title": "DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal",
     "authors": ["Oishy Saha", "et al."],
-    "venue": "IEEE WIECON-ECE — Best Paper Award",
+    "venue": "IEEE WIECON-ECE, 2022",
     "year": 2022,
     "links": { "html": "", "pdf": "", "code": "" },
     "abstract": "Placeholder abstract.",
