@@ -1,7 +1,7 @@
 [
   {
     "id": "access-2022",
-    "badge": "IEEE",
+    "badge": "IEEE Access",
     "badgeClass": "ieee",
     "type": "journal",
     "title": "Automatic Emotion Recognition From Multi-Band EEG Data Based on a Deep Learning Scheme With Effective Channel Attention",
