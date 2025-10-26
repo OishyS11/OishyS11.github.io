@@ -191,11 +191,18 @@
     </div>
   </div>
 
+  <!-- Optional inline fallback for publications (leave [] or paste your array here) -->
+  <script type="application/json" id="pub-data">[]</script>
+
+  <noscript>
+    <style>#pub-list::before{content:"Enable JavaScript to see publications."}</style>
+  </noscript>
+
   <script>
     // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Render pubs from JSON
+    // Safe text escaper
     function escapeHtml(s){ return String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;'); }
 
     function renderPubItem(p){
@@ -239,12 +246,40 @@
 
     async function loadPublications(){
       const container = document.getElementById('pub-list');
-      try{
-        const res = await fetch('publications.json', { cache: 'no-cache' });
-        if(!res.ok) throw new Error('Failed to load publications.json');
-        const items = await res.json();
 
-        // Sort newest first; if 'date' provided, prefer it; fallback to year
+      // 1) Try inline JSON fallback first (works even without fetch)
+      try {
+        const inline = document.getElementById('pub-data');
+        if (inline && inline.textContent.trim() && inline.textContent.trim() !== '[]') {
+          const items = JSON.parse(inline.textContent);
+          if (Array.isArray(items) && items.length) {
+            items.sort((a,b)=>{
+              const da = a.date ? new Date(a.date) : new Date(String(a.year||0));
+              const db = b.date ? new Date(b.date) : new Date(String(b.year||0));
+              return db - da;
+            });
+            container.innerHTML = items.map(renderPubItem).join('');
+            return; // done
+          }
+        }
+      } catch (e) {
+        console.warn('Inline pub-data parse failed:', e);
+      }
+
+      // 2) Fetch publications.json with cache-busting (works on GitHub Pages & local server)
+      async function get(url){
+        const cacheBust = url + (url.includes('?') ? '&' : '?') + 't=' + Date.now();
+        const res = await fetch(cacheBust, { cache: 'no-store' });
+        console.log('Fetching:', res.url, res.status);
+        if(!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+        const data = await res.json();
+        if(!Array.isArray(data)) throw new Error('publications.json must be a JSON array at top level');
+        return data;
+      }
+
+      try{
+        const items = await get('./publications.json');
+
         items.sort((a,b)=>{
           const da = a.date ? new Date(a.date) : new Date(String(a.year||0));
           const db = b.date ? new Date(b.date) : new Date(String(b.year||0));
@@ -252,10 +287,9 @@
         });
 
         container.innerHTML = items.map(renderPubItem).join('');
-
       }catch(err){
-        console.error(err);
-        container.innerHTML = `<p style="color:#b00">Failed to load publications.</p>`;
+        console.error('Publications load error:', err);
+        container.innerHTML = `<p style="color:#b00">Failed to load publications: ${String(err.message||err)}</p>`;
       }
     }
 
