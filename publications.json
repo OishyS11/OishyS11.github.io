@@ -46,8 +46,8 @@
     "authors": ["Oishy Saha", "J. Tasnim", "M. T. Raihan", "T. Mahmud", "I. Ahmmed", "S. A. Fattah"],
     "venue": "TENCON 2020 - IEEE Region 10 Conference",
     "year": 2020,
-    "links": { "html": "", "pdf": "", "code": "" },
-    "abstract": "Placeholder abstract.",
+    "links": { "html": "https://ieeexplore.ieee.org/abstract/document/9293802", "pdf": "", "code": "" },
+    "abstract": "Since the onset of COVID-19, radiographic image analysis coupled with artificial intelligence (AI) has become popular due to insufficient RT-PCR test kits. In this paper, an automated AI-assisted COVID-19 diagnosis scheme is proposed utilizing the ensembling approach of multiple convolutional neural networks (CNNs). Two different strategies have been carried out for ensembling: A feature level fusionbased ensembling method and a decision level ensembling method. Several traditional CNN architectures are tested and finally in the ensembling operation, MobileNet, InceptionV3, DenseNet201, DenseNet121 and Xception are used. To handle the computational complexity of multiple networks, transfer learning strategy is incorporated through ImageNet pre-trained weight initialization. For feature-level ensembling scheme, global averages of the convolutional feature maps generated from multiple networks are aggregated and undergo through fully connected layers for combined optimization. Additionally, for decision level ensembling scheme, final prediction generated from multiple networks are converged into a single prediction by utilizing the maximum voting criterion. Both strategies perform better than any individual network. Outstanding performances have been achieved through extensive experimentation on a public database with 96% accuracy on 3-class (COVID-19/normal/pneumonia) diagnosis and 89.21% on 4-class (COVID-19/normal/viral pneumonia/bacterial pneumonia) diagnosis.",
     "bibtex": "@inproceedings{Saha2020TENCON,\n  title={A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image},\n  author={Saha, Oishy and Tasnim, J. and Raihan, M. T. and Mahmud, T. and Ahmmed, I. and Fattah, S. A.},\n  booktitle={TENCON 2020 - IEEE Region 10 Conference},\n  year={2020}\n}"
   },
   {
@@ -57,7 +57,7 @@
     "type": "conference",
     "title": "DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal",
     "authors": ["Oishy Saha", "et al."],
-    "venue": "IEEE WIECON-ECE, 2022",
+    "venue": "IEEE WIECON-ECE",
     "year": 2022,
     "links": { "html": "", "pdf": "", "code": "" },
     "abstract": "Placeholder abstract.",
