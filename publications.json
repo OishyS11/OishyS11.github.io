@@ -17,7 +17,7 @@
       "pdf": "",
       "code": ""
     },
-    "abstract": "Automatic emotion recognition using EEG ... (shorten for page)",
+    "abstract": "Automatic emotion recognition using electroencephalogram (EEG) has obtained a wide range of attention in the domain of human-computer interaction (HCI) owing to the notable differences in brain activities in the event of different types of emotions. In this paper, a novel emotion recognition approach is proposed based on a deep learning scheme utilizing the temporal, spatial, and frequency effects of the EEG signal. As neural firing provides a pathway to elicit emotions, temporal, spatial, and frequency sub-band analysis of EEG signals uncovers salient information to categorize different classes of emotions. In this regard, temporal data from each channel are divided into major spectral bands and 2D signal matrices are constructed by combining the temporal information of different frequency band signals. After concatenating all signal matrices obtained from the available channels, a 3D feature space is obtained, which can better characterize emotion variations and, thus, better classification performance is obtained. The feature space is applied to a 2D deep neural network where the band information is passed to the depth dimension of the neural network. In order to highlight the important channels, a channel attention mechanism is proposed with the neural network to distribute the weights among the channels according to the contribution. Hence, the modified feature space effectively captures distinctive information about specific channels in the context of emotion recognition. In this study, detailed and extensive experimentations are carried out on a publicly available DEAP dataset and a very satisfactory performance is obtained for the valence and the arousal domain in 2-class scenario for the subject-dependent case. The average accuracies obtained for valence and arousal domain in binary class problem are 97.06% and 96.93%, respectively.",
     "bibtex": "@ARTICLE{9963974,\n  author={Saha, Oishy and Mahmud, Md. Sultan and Fattah, Shaikh Anowarul and Saquib, Mohammad},\n  journal={IEEE Access},\n  title={Automatic Emotion Recognition From Multi-Band EEG Data Based on a Deep Learning Scheme With Effective Channel Attention},\n  year={2023},\n  volume={11},\n  pages={2342-2350},\n  doi={10.1109/ACCESS.2022.3224725}\n}"
   },
   {
@@ -26,7 +26,7 @@
     "badgeClass": "ieee",
     "type": "journal",
     "title": "Emotion Recognition with Reduced Channels Using CWT-Based EEG Feature Representation and a CNN Classifier",
-    "authors": ["Md. Sakhawat Mahmud", "Shaikh A. Fattah", "Md. Saquib", "Oishy Saha"],
+    "authors": ["Md. Sultan Mahmud", "Shaikh A. Fattah", "Md. Saquib", "Oishy Saha"],
     "venue": "Biomedical Physics & Engineering Express",
     "year": 2024,
     "links": {
