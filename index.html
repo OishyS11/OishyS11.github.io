@@ -123,7 +123,7 @@
             <ul class="list">
               <li>[December'24] Passed Ph.D. qualifying exam.</li>
               <li>[August'24] Started working as a graduate teaching assistant.</li>
-              <li> [August'23] Started working as graduate research assistant at the DSPCAD lab </li>
+              <li>[August'23] Started working as graduate research assistant at the DSPCAD lab</li>
               <li>[August'23] Started Ph.D. in ECE at the University of Maryland, College Park</li>
             </ul>
           </div>
@@ -140,12 +140,10 @@
           </div>
         </section>
 
-        <!-- ===================== PUBLICATIONS (JSON-driven) ===================== -->
+        <!-- ===================== PUBLICATIONS ===================== -->
         <section id="pubs" aria-label="Publications">
           <h2>Publications</h2>
-          <div class="pubs" id="pub-list">
-            <!-- Dynamically injected -->
-          </div>
+          <div class="pubs" id="pub-list"></div>
         </section>
 
         <section id="experience" class="grid-2">
@@ -154,7 +152,7 @@
             <ul class="list">
               <li>Real-Time Image Analysis for Additive Manufacturing (RIAM)</li>
               <li>Real-Time Wireless Communication for Industrial Networks (RWCIN)</li>
-              <li>Maryland-Nebraska Video Analytics for Public Safety (MNVP) </li>
+              <li>Maryland-Nebraska Video Analytics for Public Safety (MNVP)</li>
               <li>Automatic Emotion Recognition Using EEG and Speech Signals</li>
             </ul>
           </div>
@@ -191,35 +189,32 @@
     </div>
   </div>
 
-  <!-- Optional inline fallback for publications (leave [] or paste your array here) -->
+  <!-- Optional inline fallback: paste your array to render even without fetch -->
   <script type="application/json" id="pub-data">[]</script>
 
-  <noscript>
-    <style>#pub-list::before{content:"Enable JavaScript to see publications."}</style>
-  </noscript>
-
   <script>
-    // Current year
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Safe text escaper
-    function escapeHtml(s){ return String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;'); }
+    // Escape helper
+    const E = s => String(s||'')
+      .replaceAll('&','&amp;').replaceAll('<','&lt;')
+      .replaceAll('>','&gt;').replaceAll('"','&quot;')
+      .replaceAll("'","&#039;");
 
     function renderPubItem(p){
-      const idAbs = `abs-${p.id}`;
-      const idBib = `bib-${p.id}`;
-      const has = (k)=> p.links && p.links[k] && p.links[k].trim() !== '';
+      const idAbs = `abs-${p.id}`, idBib = `bib-${p.id}`;
+      const has = k => p.links && p.links[k] && p.links[k].trim();
       const authors = (p.authors||[]).join(', ');
       const venueLine = [p.venue, p.year].filter(Boolean).join(', ');
       const doiBtn = p.doi ? `<a class="pub-btn" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI</a>` : '';
-
       return `
-        <article class="pub-item" id="paper-${escapeHtml(p.id)}">
-          <div>${p.badge ? `<span class="pub-badge ${escapeHtml((p.badgeClass||'').toLowerCase())}">${escapeHtml(p.badge)}</span>` : ''}</div>
+        <article class="pub-item" id="paper-${E(p.id)}">
+          <div>${p.badge ? `<span class="pub-badge ${E((p.badgeClass||'').toLowerCase())}">${E(p.badge)}</span>` : ''}</div>
           <div class="pub-main">
-            <h3>${p.title ? `<a href="${has('html') ? p.links.html : '#'}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a>` : ''}</h3>
-            <p class="pub-authors">${escapeHtml(authors)}</p>
-            <div class="pub-venue">${escapeHtml(venueLine)}</div>
+            <h3>${p.title ? `<a href="${has('html') ? p.links.html : '#'}" target="_blank" rel="noopener">${E(p.title)}</a>` : ''}</h3>
+            <p class="pub-authors">${E(authors)}</p>
+            <div class="pub-venue">${E(venueLine)}</div>
             <div class="pub-actions">
               ${p.abstract ? `<a class="pub-btn" data-action="toggle" data-target="${idAbs}" href="#">ABS</a>` : ''}
               ${p.bibtex ? `<a class="pub-btn" data-action="toggle" data-target="${idBib}" href="#">BIB</a>` : ''}
@@ -228,90 +223,61 @@
               ${has('code') ? `<a class="pub-btn" href="${p.links.code}" target="_blank" rel="noopener">CODE</a>` : ''}
               ${doiBtn}
             </div>
-            ${p.abstract ? `
-              <div id="${idAbs}" class="pub-box hidden">
-                <strong>Abstract.</strong>
-                <p>${escapeHtml(p.abstract)}</p>
-              </div>` : ''}
-            ${p.bibtex ? `
-              <div id="${idBib}" class="pub-box hidden">
-                <strong>BibTeX.</strong>
-                <pre id="pre-${idBib}" class="bib">${escapeHtml(p.bibtex)}</pre>
-                <div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="pre-${idBib}" href="#">Copy</a></div>
-              </div>` : ''}
+            ${p.abstract ? `<div id="${idAbs}" class="pub-box hidden"><strong>Abstract.</strong><p>${E(p.abstract)}</p></div>` : ''}
+            ${p.bibtex ? `<div id="${idBib}" class="pub-box hidden"><strong>BibTeX.</strong><pre id="pre-${idBib}" class="bib">${E(p.bibtex)}</pre><div class="pub-copy"><a class="pub-btn" data-action="copy" data-target="pre-${idBib}" href="#">Copy</a></div></div>` : ''}
           </div>
-        </article>
-      `;
+        </article>`;
     }
 
     async function loadPublications(){
       const container = document.getElementById('pub-list');
 
-      // 1) Try inline JSON fallback first (works even without fetch)
-      try {
+      // Try inline fallback first (lets the page render even without fetch)
+      try{
         const inline = document.getElementById('pub-data');
         if (inline && inline.textContent.trim() && inline.textContent.trim() !== '[]') {
           const items = JSON.parse(inline.textContent);
-          if (Array.isArray(items) && items.length) {
+          if (Array.isArray(items) && items.length){
             items.sort((a,b)=>{
               const da = a.date ? new Date(a.date) : new Date(String(a.year||0));
               const db = b.date ? new Date(b.date) : new Date(String(b.year||0));
               return db - da;
             });
             container.innerHTML = items.map(renderPubItem).join('');
-            return; // done
+            return;
           }
         }
-      } catch (e) {
-        console.warn('Inline pub-data parse failed:', e);
-      }
+      }catch(e){ console.warn('Inline pub-data parse failed:', e); }
 
-      // 2) Fetch publications.json with cache-busting (works on GitHub Pages & local server)
+      // Fetch publications.json with cache-busting (GitHub Pages or local dev server)
       async function get(url){
-        const cacheBust = url + (url.includes('?') ? '&' : '?') + 't=' + Date.now();
-        const res = await fetch(cacheBust, { cache: 'no-store' });
-        console.log('Fetching:', res.url, res.status);
+        const res = await fetch(url + (url.includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
         if(!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
         const data = await res.json();
-        if(!Array.isArray(data)) throw new Error('publications.json must be a JSON array at top level');
+        if(!Array.isArray(data)) throw new Error('publications.json must be a JSON array');
         return data;
       }
 
       try{
         const items = await get('./publications.json');
-
         items.sort((a,b)=>{
           const da = a.date ? new Date(a.date) : new Date(String(a.year||0));
           const db = b.date ? new Date(b.date) : new Date(String(b.year||0));
           return db - da;
         });
-
         container.innerHTML = items.map(renderPubItem).join('');
       }catch(err){
         console.error('Publications load error:', err);
-        container.innerHTML = `<p style="color:#b00">Failed to load publications: ${String(err.message||err)}</p>`;
+        container.innerHTML = `<p style="color:#b00">Failed to load publications: ${E(err.message||err)}</p>`;
       }
     }
 
-    // Global click handler for ABS/BIB toggle + BibTeX copy
-    document.addEventListener('click', function(e){
-      const a = e.target.closest('a.pub-btn');
-      if(!a) return;
+    // Toggle ABS/BIB and copy BibTeX
+    document.addEventListener('click', e=>{
+      const a = e.target.closest('a.pub-btn'); if(!a) return;
       const action = a.dataset.action, target = a.dataset.target;
-      if(action === 'toggle'){
-        e.preventDefault();
-        const box = document.getElementById(target);
-        if(box) box.classList.toggle('hidden');
-      }
-      if(action === 'copy'){
-        e.preventDefault();
-        const pre = document.getElementById(target);
-        if(pre){
-          navigator.clipboard.writeText(pre.textContent.trim()).then(()=>{
-            a.textContent = 'Copied!'; setTimeout(()=>a.textContent='Copy', 1000);
-          }).catch(()=> alert('Copy failed.'));
-        }
-      }
+      if(action === 'toggle'){ e.preventDefault(); const box = document.getElementById(target); if(box) box.classList.toggle('hidden'); }
+      if(action === 'copy'){ e.preventDefault(); const pre = document.getElementById(target); if(pre){ navigator.clipboard.writeText(pre.textContent.trim()).then(()=>{ a.textContent='Copied!'; setTimeout(()=>a.textContent='Copy',1000); }).catch(()=> alert('Copy failed.')); } }
     });
 
     // Init
