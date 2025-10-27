@@ -59,8 +59,8 @@
     "authors": ["Oishy Saha", "et al."],
     "venue": "IEEE WIECON-ECE",
     "year": 2022,
-    "links": { "html": "", "pdf": "", "code": "" },
-    "abstract": "Placeholder abstract.",
+    "links": { "html": "https://ieeexplore.ieee.org/abstract/document/10150514", "pdf": "", "code": "" },
+    "abstract": "Emotion analysis by electroencephalogram (EEG) provides vital information about our overall well-being. Analyzing the change in emotional states in response to changes in brain activity has the potential to anticipate the synchronization of attentional, cognitive, and behavioral reactions to emotionally expressive events and hence detect severe mental disorders. This paper proposes an efficient deep learning architecture, DEEPSATTNET, to classify emotions. In contrast to the traditional method, an additional stage for feature extraction is skipped to reduce computational costs. The CNN block of the DEEPSATTNET network captures spatial characteristics from raw EEG data, whereas the LSTM block efficiently encodes significant features over time steps. To acquire the intra-relationship of the extracted feature, the proposed method employs an efficient self-attention mechanism that effectively assigns greater weights to the most relevant information. Finally, the collected feature vector is fed into the dense classifier, which classifies distinct types of emotions. To validate the performance of the proposed architecture, thorough and extensive experimentations are carried out on a publicly available EEG emotion (DEAP) dataset considering mixed subject analysis. For binary class problems, the mean accuracies found for valence and arousal dimensions are 88.65% and 89.24%, respectively.",
     "bibtex": "@inproceedings{Saha2022WIECON,\n  title={DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal},\n  author={Saha, Oishy and coauthors},\n  booktitle={IEEE WIECON-ECE},\n  year={2022}\n}"
   }
 ]
