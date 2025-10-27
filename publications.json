@@ -40,7 +40,7 @@
   {
     "id": "tencon-2020",
     "badge": "Conference",
-    "badgeClass": "arxiv",
+    "badgeClass": "conf",
     "type": "conference",
     "title": "A Multi-Model Based Ensembling Approach to Detect COVID-19 from Chest X-ray Image",
     "authors": ["Oishy Saha", "J. Tasnim", "M. T. Raihan", "T. Mahmud", "I. Ahmmed", "S. A. Fattah"],
