@@ -56,7 +56,7 @@
     "badgeClass": "conf",
     "type": "conference",
     "title": "DEEPSATTNET: An Efficient Deep Neural Network with Self-Attention Mechanism for Emotion Recognition Utilizing EEG Signal",
-    "authors": ["Oishy Saha", "et al."],
+    "authors": ["Oishy Saha", "Md. Sultan Mahmud","Shaikh Anowarul Fattah"],
     "venue": "IEEE WIECON-ECE",
     "year": 2022,
     "links": { "html": "https://ieeexplore.ieee.org/abstract/document/10150514", "pdf": "", "code": "" },
