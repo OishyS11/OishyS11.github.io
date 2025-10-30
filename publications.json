@@ -81,7 +81,7 @@
     "badgeClass": "conf",
     "type": "conference",
     "title": "Automatic Emotion Recognition from EEG Signal Utilizing Wavelet Packet Node Reconstruction And a CNN Classifier",
-    "authors": ["Md. Sultan Mahmud", "Oishy Saha", "Shaikh Anowarul Fattah"],
+    "authors": ["Oishy Saha", "Md. Sultan Mahmud", "Shaikh Anowarul Fattah"],
     "venue": "International Conference on Computing and Information Technology (ICCIT)",
     "year": 2023,
     "links": { "html": "https://ieeexplore.ieee.org/abstract/document/10440995", "pdf": "https://drive.google.com/file/d/1SBPYAkEfh_E2hrs4q7yLa_ttqBw6IaiG/view?usp=sharing", "code": "" },
