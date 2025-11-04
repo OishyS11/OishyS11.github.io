@@ -113,15 +113,16 @@ a:hover{text-decoration:underline}
   background: #333333; /* subtle gray hover */
 }
 
-/* Gmail (red) */
 .icon-btn.gmail {
-  background: #D93025;
-  border-color: #D93025;
-  color: #ffffff;
+  background: #ffffff;          /* White background for contrast */
+  border-color: #D93025;        /* Gmail red border */
+  color: #D93025;
 }
+
 .icon-btn.gmail:hover {
-  background: #b1271e;
+  background: #fbe9e7;          /* soft red hover tint */
 }
+
 
 
   /* Visually hidden (for accessibility) */
@@ -221,14 +222,13 @@ a:hover{text-decoration:underline}
 
 
 
-          <!-- Email -->
-          <a class="icon-btn gmail" href="mailto:osaha@umd.edu" title="Email" aria-label="Email">
-            <span class="sr-only">Email</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-            </svg>
-          </a>
-        </div>
+          <!-- Gmail -->
+        <a class="icon-btn gmail" href="mailto:osaha@umd.edu" title="Email" aria-label="Gmail">
+          <span class="sr-only">Gmail</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.svg" 
+              alt="Gmail logo" style="width:24px;height:24px;">
+        </a>
+
 
         <nav aria-label="Section navigation">
           <a href="#about">About</a>
