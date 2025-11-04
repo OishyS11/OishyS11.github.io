@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience · Oishy Saha</title>
+  <meta name="description" content="Research and teaching experience of Oishy Saha" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b0f19;--text:#e8ecf3;--muted:#a9b2c7;--link:#7bdcff;--card:#11182a;--border:rgba(255,255,255,.08);
+      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35);--max:980px
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(900px 600px at -10% -20%,#1a2650 0%,var(--bg) 55%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .shell{max-width:var(--max);margin:0 auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+    .back{display:inline-flex;gap:8px;align-items:center;color:var(--link)}
+    main{display:flex;flex-direction:column;gap:20px}
+    section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    h1{margin:0;font-size:26px}
+    h2{margin:0 0 12px;font-size:20px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .list{margin:0}
+    .list li{margin:0 0 8px 20px}
+    footer{color:var(--muted);text-align:center;margin-top:12px}
+    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>Experience</h1>
+      <a class="back" href="index.html" rel="noopener">← Back to Home</a>
+    </header>
+
+    <main>
+      <section>
+        <h2>Research Experience</h2>
+        <ul class="list">
+            <li><strong>Real-Time Image Analysis for Additive Manufacturing (RIAM):</strong>  This is a
+ collaborative project between the University of Maryland and the National Institute of
+ Standards and Technology (NIST). The project aims to implement a real-time anomaly
+ detection process in additive manufacturing using unlabeled data with a lower computational
+ cost. The work is also directed to automate the anomaly detection system for edge devices.</li>
+            <li><strong>Real-Time Wireless Communication for Industrial Networks (RWCIN):</strong> This is a
+ collaborative project between the University of Maryland and the National Institute of
+ Standards and Technology (NIST). The project aims to characterize and categorize different
+ aggressors for industrial wireless channels and develop cyberattack datasets for industrial
+ wireless communication. The final plan extends to implementing a real-time cyberattack
+ detection system for edge devices using the well-curated dataset.</li>
+            <li><strong>Maryland–Nebraska Video Analytics for Public Safety (MNVP):</strong> This is a
+ collaborative project among the University of Maryland, the University of Nebraska-Lincoln, and
+ the Baltimore Police Department. The project focused on analyzing criminal activities and the
+ positions of firearms using body-worn camera video and audio and contributed to public-safety.</li>
+            <li><strong> Undergraduate Thesis: Automatic Emotion Recognition from EEG Signal in
+Time-Frequency Domain with Reduced Channels Using Deep Neural Architecture:</strong> The project aims to automate the emotion recognition task by exploiting feature-based and
+deep learning-based approaches with fewer channels using different datasets.</li>
+            <li><strong>Automatic Detection of COVID-19 from Chest X-ray Images:</strong>In the study, COVID-19, viral,
+bacterial pneumonia, and normal cases are diagnosed from chest radiographic images. Different
+ensembling strategies are employed, and several deep learning architectures are implemented
+with better accuracy, precision, sensitivity, and specificity for automatic COVID-19 detection.</li>
+        </ul>
+      </section>
+      <section>
+          <h2>Teaching Experience</h2>
+          <ul class="list">
+            <li><strong>Graduate Teaching Assistant</strong> — University of Maryland, College Park (Fall 2024, Spring 2025)  
+              Assisted in graduate-level ECE courses, led lab sessions, and evaluated coursework.</li>
+            <li><strong>Lecturer</strong> — Military Institute of Science and Technology (MIST), Dhaka (2022–2023)  
+              Taught undergraduate courses in control systems, electronics, and communication engineering.</li>
+          </ul>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Oishy Saha
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
