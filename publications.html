@@ -8,13 +8,28 @@
   <link rel="icon" href="favicon.ico" />
   <style>
     :root{
-      --bg:#0b0f19;--text:#e8ecf3;--muted:#a9b2c7;--link:#7bdcff;--card:#11182a;--border:rgba(255,255,255,.08);
-      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35);--max:980px
+      --bg:#ffffff;             /* main background white */
+      --text:#111111;           /* dark text */
+      --muted:#555555;          /* muted text */
+      --link:#0066cc;           /* blue links */
+      --card:#f8f9fa;           /* light gray card background */
+      --border:rgba(0,0,0,.1);  /* light border */
+      --radius:16px;
+      --shadow:0 4px 15px rgba(0,0,0,.1);
+      --max:1180px;
+      --sidebar:300px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(900px 600px at -10% -20%,#1a2650 0%,var(--bg) 55%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial}
+    html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);     /* remove radial gradient */
+  color:var(--text);
+  font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial;
+}
     a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
+a:hover{text-decoration:underline}
+
     .shell{max-width:var(--max);margin:0 auto;padding:24px}
     header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
     .back{display:inline-flex;gap:8px;align-items:center}
