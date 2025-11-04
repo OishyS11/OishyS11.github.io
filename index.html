@@ -70,9 +70,47 @@ a:hover{text-decoration:underline}
     color: #a6ffa6; /* Official ORCID-like green */
   }
 
-  .icon-btn.orcid:hover {
-    background: rgba(166, 255, 166, 0.15);
-  }
+  /* === ICON BRAND COLORS === */
+
+/* Google Scholar (blue) */
+.icon-btn.scholar {
+  background: #4285F4;          /* Google blue */
+  border-color: #4285F4;
+  color: #ffffff;
+}
+.icon-btn.scholar:hover {
+  background: #3367D6;
+}
+
+/* LinkedIn (blue) */
+.icon-btn.linkedin {
+  background: #0077B5;
+  border-color: #0077B5;
+  color: #ffffff;
+}
+.icon-btn.linkedin:hover {
+  background: #005983;
+}
+
+/* ORCID (green) */
+.icon-btn.orcid {
+  background: #a6ce39;
+  border-color: #a6ce39;
+  color: #ffffff;
+}
+.icon-btn.orcid:hover {
+  background: #8abb2f;
+}
+
+/* Gmail (red) */
+.icon-btn.gmail {
+  background: #D93025;
+  border-color: #D93025;
+  color: #ffffff;
+}
+.icon-btn.gmail:hover {
+  background: #b1271e;
+}
 
 
   /* Visually hidden (for accessibility) */
@@ -142,7 +180,7 @@ a:hover{text-decoration:underline}
 
         <div class="icon-row" aria-label="Profile links">
           <!-- Google Scholar (mortarboard icon) -->
-          <a class="icon-btn" href="https://scholar.google.com/citations?user=rJZ1LVAAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
+          <a class="icon-btn scholar" href="https://scholar.google.com/citations?user=rJZ1LVAAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
             <span class="sr-only">Google Scholar</span>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 3 2 9l10 6 8-4.8V17h2V9L12 3zm0 8.7L5.2 9 12 4.8 18.8 9 12 11.7zm-6 4.3v2c0 2.2 2.7 3.5 6 3.5s6-1.3 6-3.5v-2c-1.6 1.2-3.9 1.8-6 1.8s-4.4-.6-6-1.8z"/>
@@ -150,7 +188,7 @@ a:hover{text-decoration:underline}
           </a>
 
           <!-- LinkedIn -->
-          <a class="icon-btn" href="https://www.linkedin.com/in/oishy-saha-18391a164/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <a class="icon-btn linkedin" href="https://www.linkedin.com/in/oishy-saha-18391a164/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
             <span class="sr-only">LinkedIn</span>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.1c.5-.9 1.8-2.1 3.8-2.1 4.1 0 4.9 2.7 4.9 6.1V24h-4v-6.7c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24h-4V8.5z"/>
@@ -175,7 +213,7 @@ a:hover{text-decoration:underline}
 
 
           <!-- Email -->
-          <a class="icon-btn" href="mailto:osaha@umd.edu" title="Email" aria-label="Email">
+          <a class="icon-btn gmail" href="mailto:osaha@umd.edu" title="Email" aria-label="Email">
             <span class="sr-only">Email</span>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
