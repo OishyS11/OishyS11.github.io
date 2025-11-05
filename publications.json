@@ -1,7 +1,7 @@
 [
   {
     "id": "access-2022",
-    "figure": { "src": "https://drive.google.com/file/d/1v-MavKcf-06UJrDRxJQ-_4skrV4bJFaz/view?usp=sharing", "alt": "EEG channel attention diagram" },
+    "figure": { "src": "https://drive.google.com/file/d/1v-MavKcf-06UJrDRxJQ-_4skrV4bJFaz/view?usp=sharing", "alt": "EEG emotion recognition diagram" },
     "badge": "Journal",
     "badgeClass": "ieee",
     "type": "journal",
@@ -98,7 +98,7 @@
     "authors": ["Jarin Tasnim", "Barproda Halder", "Oishy Saha", "Talha Ibn Mahmud", "Shahed Ahmed"],
     "venue": "International Conference on Electrical, and Computer Engineering (ICECE)",
     "year": 2022,
-    "links": { "html": "https://ieeexplore.ieee.org/abstract/document/10088845", "pdf": "https://drive.google.com/file/d/1JlbZaEj-n4-cuUqFYfb6OfjRFgrxSyQP/view?usp=sharing", "code": "" },
+    "links": { "html": "https://ieeexplore.ieee.org/abstract/document/10088845", "pdf": "https://drive.google.com/file/d/1JlbZaEj-n4-cuUqFYfb6OfjRFgrxSyQP/view?usp=sharing", "code": "https://github.com/OishyS11/DenseLinkNet.git" },
     "abstract":"Corneal endothelium cell provides vital clinical information regarding the health status of the cornea, which is crucial to monitor different corneal diseases. In this regard, segmentation of the corneal endothelial cell plays a significant role in assessing different clinical parameters, like cell density, coefficient of variation, and hexagonality, that aids clinicians in diagnosing different diseases. Since the manual observation process is both time-consuming and susceptible to errors, finding an efficient approach to automate the segmentation task is imperative. In this paper, an encoder-decoder based deep neural architecture, namely DenseLinkNet, is introduced to automate the segmentation process. In the proposed segmentation architecture, DenseNet-201 is used as an encoder, and LinkNet is used as a decoder. The encoder block exploits the output of the convolutional and dense blocks, and the generated feature map gets added with the corresponding decoder block. Following the process, a segmentation head is introduced to conclude the segmentation task. In this work, the publicly available Alizarine dataset is used for experimental purpose. The proposed DenseLinkNet architecture outperforms other segmentation networks with respect to different performance metrics. The network has achieved a dice-score of 76.82% and a Jaccard-index of 62.51%.",
     "bibtex": "@INPROCEEDINGS{10088845, \n author={Tasnim, Jarin and Halder, Barproda and Saha, Oishy and Mahmud, Talha Ibn and Ahmed, Shahed}, \n booktitle={2022 12th International Conference on Electrical and Computer Engineering (ICECE)}, \n title={DenseLinkNet: A Deep Convolutional Architecture for Automatic Segmentation of Corneal Endothelial Cell}, \n year={2022}, \n volume={}, \n number={}, \n pages={220-223},\n keywords={Sensitivity;Microprocessors;Neural networks;Computer architecture;Manuals;Decoding;Task analysis;Corneal endothelial cell;cell segmentation;encoder;decoder;deep neural network}, \n doi={10.1109/ICECE57408.2022.10088845}}"
   }
