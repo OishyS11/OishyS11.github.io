@@ -1,6 +1,7 @@
 [
   {
     "id": "access-2022",
+    "figure": { "src": "https://drive.google.com/file/d/1v-MavKcf-06UJrDRxJQ-_4skrV4bJFaz/view?usp=sharing", "alt": "EEG channel attention diagram" },
     "badge": "Journal",
     "badgeClass": "ieee",
     "type": "journal",
