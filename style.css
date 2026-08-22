@@ -90,6 +90,13 @@ body {
     line-height: 1.5;
 }
 
+/* Keep every visible heading consistent with the normal-weight name header. */
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
 p,
 li,
 .paper-authors,
@@ -209,7 +216,7 @@ a:hover {
 
 #description-container h1 {
     text-align: center;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 #description-container p {
@@ -265,6 +272,7 @@ a:hover {
     margin: 0 0 9px;
     color: #222;
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.35;
 }
 
