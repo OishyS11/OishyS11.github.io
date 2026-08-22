@@ -91,12 +91,7 @@ body {
 }
 
 /* Keep every visible heading consistent with the normal-weight name header. */
-h1,
-h2,
-h3 {
-    font-weight: 700;
-
-}
+ 
 
 p,
 li,
@@ -424,4 +419,44 @@ a:hover {
     .paper-details {
         padding-left: 0;
     }
+}
+/************************ Font Weight Corrections ************************/
+
+/* Keep ordinary text normal */
+body,
+p,
+li,
+.research-card p,
+.research-intro,
+.paper-authors,
+.conf-or-jour-name,
+.paper-links,
+.paper-abstract,
+.availability-banner {
+    font-weight: 400;
+}
+
+/* Bold main name and section headers */
+#description-container h1,
+#news-container > h2,
+#research-container > h2,
+#papers-container > h2 {
+    font-weight: 700;
+}
+
+/* Bold publication titles */
+.paper-title {
+    font-weight: 700;
+}
+
+/* Keep research-card titles normal */
+.research-card h3 {
+    font-weight: 400;
+}
+
+/* Preserve manually emphasized text */
+strong,
+.bold-text,
+.research-result {
+    font-weight: 700;
 }
