@@ -7,6 +7,7 @@
     src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
     font-family: 'Lato';
@@ -15,6 +16,7 @@
     src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin-ext */
 @font-face {
     font-family: 'Lato';
@@ -23,6 +25,7 @@
     src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
     font-family: 'Lato';
@@ -31,6 +34,7 @@
     src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin-ext */
 @font-face {
     font-family: 'Lato';
@@ -39,6 +43,7 @@
     src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
     font-family: 'Lato';
@@ -47,6 +52,7 @@
     src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* latin-ext */
 @font-face {
     font-family: 'Lato';
@@ -55,6 +61,7 @@
     src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
     font-family: 'Lato';
@@ -63,42 +70,21 @@
     src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-.section-nav {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 18px 0 10px;
-}
-
-.section-nav a {
-    display: inline-block;
-    padding: 8px 16px;
-    color: #1772d0;
-    background: #f4f7fa;
-    border: 1px solid #d8e0e8;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.section-nav a:hover {
-    color: #ffffff;
-    background: #1772d0;
-}
-
-#news-container,
-#papers-container {
-    scroll-margin-top: 25px;
-}
-
 /************************ General Styles ************************/
 * {
+    box-sizing: border-box;
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    color: #222;
+    background: #fff;
 }
 
 a {
@@ -108,8 +94,8 @@ a {
 
 a:focus,
 a:hover {
-  color: #f09228;
-  text-decoration: none;
+    color: #f09228;
+    text-decoration: none;
 }
 
 .text-center {
@@ -129,16 +115,51 @@ a:hover {
 }
 
 .width-90-percent {
-    width: 80% !important;
+    width: 90% !important;
 }
 
 .justify-content-center {
     justify-content: center;
 }
 
-/************************ Styles ************************/
+/************************ Page Navigation ************************/
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 18px 0 26px;
+}
+
+.section-nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #1772d0;
+    background: #f4f7fa;
+    border: 1px solid #d8e0e8;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.section-nav a:focus,
+.section-nav a:hover {
+    color: #fff;
+    background: #1772d0;
+    border-color: #1772d0;
+}
+
+#research-container,
+#news-container,
+#papers-container {
+    scroll-margin-top: 25px;
+}
+
+/************************ Main Layout ************************/
 #container {
-    width: 100%;
+    width: calc(100% - 32px);
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -159,6 +180,7 @@ a:hover {
 
 #image-container img {
     width: 100%;
+    height: auto;
     border-radius: 50%;
 }
 
@@ -176,8 +198,74 @@ a:hover {
 #description-container p {
     text-align: justify;
     font-size: 14px;
+    line-height: 1.5;
 }
 
+/************************ Featured Research ************************/
+#research-container {
+    margin-bottom: 36px;
+}
+
+.research-intro {
+    margin: -4px 0 18px;
+    color: #555;
+    font-size: 14px;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.research-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(31, 41, 55, 0.06);
+}
+
+.research-card h3 {
+    margin: 0 0 9px;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.research-card p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.research-result {
+    color: #205493;
+    font-weight: 700;
+}
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: auto;
+    padding-top: 2px;
+}
+
+.research-tag {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #f0f5fa;
+    color: #205493;
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+/************************ Publications ************************/
 #paper-container {
     width: 100%;
 }
@@ -197,6 +285,7 @@ a:hover {
 
 .paper-thumbnail img {
     width: 100%;
+    height: auto;
 }
 
 .paper-details {
@@ -205,27 +294,93 @@ a:hover {
 }
 
 .paper-title {
-    font-size: 15px;
     margin: 0;
+    font-size: 15px;
 }
 
 .paper-authors {
-    font-size: 14px;
     margin: 0;
+    font-size: 14px;
 }
 
-
 .conf-or-jour-name {
-    font-size: 14px;
     display: block;
+    font-size: 14px;
 }
 
 .paper-links {
-    font-size: 14px;
     margin: 0;
+    font-size: 14px;
 }
 
 .paper-abstract {
-    font-size: 14px;
     margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+/************************ Responsive Layout ************************/
+@media (max-width: 700px) {
+    #container {
+        width: calc(100% - 28px);
+    }
+
+    #head-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #image-container {
+        width: 190px;
+        padding: 24px 15px 0;
+    }
+
+    #description-container {
+        width: 100%;
+        padding: 12px 0 20px;
+    }
+
+    #description-container p {
+        text-align: left;
+    }
+
+    .section-nav {
+        margin-top: 8px;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .paper-container {
+        align-items: flex-start;
+    }
+
+    .paper-thumbnail {
+        width: 34%;
+    }
+
+    .paper-details {
+        width: 66%;
+        padding-left: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .paper-container {
+        display: block;
+    }
+
+    .paper-thumbnail,
+    .paper-details {
+        width: 100%;
+    }
+
+    .paper-thumbnail {
+        margin-bottom: 14px;
+    }
+
+    .paper-details {
+        padding-left: 0;
+    }
 }
