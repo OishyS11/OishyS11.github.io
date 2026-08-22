@@ -34,6 +34,7 @@
         </div>
         <div class="section-nav">
             <a href="#news-container">News</a>
+            <a href="#research-container">Featured Research</a>
             <a href="#papers-container">Publications</a>
         </div>
         <section id="news-container">
@@ -47,6 +48,69 @@
                 <li><span class="news-date"><strong>August 2022: </strong></span> Joined as a lecturer in EECE at MIST, Dhaka.</li>
                 <li><span class="news-date"><strong>May 2022: </strong></span> Graduated with a B.Sc. in Electrical and Electronic Engineering from BUET.</li>
             </ul>
+        </section>
+
+        <section id="research-container">
+            <h2>Featured Research</h2>
+            <p class="research-intro">Selected projects spanning efficient AI, multimodal perception, embedded systems, and indistrial IoT.</p>
+
+            <div class="research-grid">
+                <article class="research-card">
+                    <h3>Real-Time Additive Manufacturing (RIAM)</h3>
+                    <p>
+                        I developed multimodal anomaly-detection pipelines for laser powder bed fusion (LPBF) fusing melt-pool images, scan-strategy data, and layer images under limited labeled defect annotations. My current work, Q-PHAD-AE, combines process information, quantized framework, and multi-exit inference for FPGA deployment with an average inference
+of 2 ms per image.
+                    </p>
+                    <p class="research-result">AUROC 0.932 &middot; AUPRC 0.778 &middot; 55.7% early exits</p>
+                    <div class="research-tags" aria-label="Research topics">
+                        <span class="research-tag">Multimodal AI</span>
+                        <span class="research-tag">Edge AI</span>
+                        <span class="research-tag">FPGA</span>
+                        <span class="research-tag">ONNX</span>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <h3>Secure Industrial Wireless Intelligence</h3>
+                    <p>
+                        I generated labeled cyber-attack datasets spanning normal, single-attack, sequential multi-attack, and simultaneous mixed-attack scenarios comprising 1M samples across 6 attack types. Alongside, I developed ML pipelines for multi-label attack detection, classification 
+sequential-attack tracking, and unseen-attack generalization on industrial wireless traffic.
+                    <!--<p class="research-result">1M+ samples &middot; 6 attack types &middot; Edge-oriented detection</p>-->
+                    <div class="research-tags" aria-label="Research topics">
+                        <span class="research-tag">Industrial IoT</span>
+                        <span class="research-tag">Cyber-Security</span>
+                        <span class="research-tag">Intrusion Detection</span>
+                        <span class="research-tag">Wireless Network</span>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <h3>Audio Analytics for Public Safety</h3>
+                    <p>
+                        I curated and annotated 20+ hours audio-visual body-worn camera footage from the Baltimore Police Department (BPD) to build a labeled dataset for egocentric activity recognition. Also, I built ML pipelines with an emphasis on speech emotion recognition, egocentric activity analysis, and early event detection under noise and cross-domain shifts.
+                    </p>
+                    <p class="research-result">20+ hours curated &middot; 40% CCC improvement over baseline</p>
+                    <div class="research-tags" aria-label="Research topics">
+                        <span class="research-tag">Audio and Speech Processing</span>
+                        <span class="research-tag">Domain Adaptation</span>
+                        <span class="research-tag">Public Safety</span>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <h3>Efficient EEG-Based Affective Computing</h3>
+                    <p>
+                        My earlier research developed CNN, BiLSTM, self-attention, and channel-attention models for emotion recognition from EEG signals, including compact channel-selection methods for more practical sensing systems.
+                    </p>
+                    <p class="research-result">32 to 10 channels &middot; Within 99% of full-channel accuracy</p>
+                    <div class="research-tags" aria-label="Research topics">
+                        <span class="research-tag">Affective Computing</span>
+                        <span class="research-tag">EEG</span>
+                        <span class="research-tag">Deep Learning</span>
+                        <span class="research-tag">Signal Processing</span>
+                    </div>
+                </article>
+            </div>
         </section>
         <section id="papers-container">
             <h2>Publications</h2>
