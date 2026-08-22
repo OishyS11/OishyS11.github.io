@@ -85,6 +85,23 @@ body {
     margin: 0;
     color: #222;
     background: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+p,
+li,
+.paper-authors,
+.conf-or-jour-name,
+.paper-links,
+.paper-abstract,
+.research-card p,
+.research-intro,
+.availability-banner {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 a {
@@ -200,20 +217,21 @@ a:hover {
     font-size: 14px;
     line-height: 1.5;
 }
-.availability-banner {
-            margin: 14px 0 4px;
-            padding: 10px 14px;
-            border: 1px solid #cfe0ef;
-            border-left: 4px solid #205493;
-            border-radius: 8px;
-            background: #f0f5fa;
-            color: #1c3d5a;
-            font-size: 0.95em;
-        }
 
-        .availability-banner strong {
-            color: #205493;
-        }
+.availability-banner {
+    margin: 14px 0 4px;
+    padding: 10px 14px;
+    border: 1px solid #cfe0ef;
+    border-left: 4px solid #205493;
+    border-radius: 8px;
+    background: #f0f5fa;
+    color: #1c3d5a;
+}
+
+.availability-banner strong {
+    color: #205493;
+    font-weight: 700;
+}
 
 /************************ Featured Research ************************/
 #research-container {
